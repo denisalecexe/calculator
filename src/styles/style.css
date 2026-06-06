@@ -1,0 +1,53 @@
+/* VARBILI ROOT CSS */
+:root {
+    --bg-body: #000000;
+    --bg-calculator: #142f44;
+    --bg-btn-calculator: #1d3849;
+    --border-calculator: #c2c2c2;
+    --text: #a2bbcf;
+    --btn-advanced: #dd2d00;
+    --btn-numbers: #c2d4b1;
+    --btn-operators:#a17944;
+}
+
+/* TAG */
+/* stile per il body */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--bg-body);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* ID */
+/* stile per il contenitore che contiene tutta la calcolatrice */
+#calculator {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    background-color: var(--bg-calculator);
+    border: 3px solid var(--border-calculator);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+/* stile per l'input dove si vedono i numeri scritti */
+#result {
+    border: none;
+    outline: none;
+    margin: 5px;
+}
+
+/* CLASS */
+/* stile per tutti i bottoni presenti */
+.btn {
+    background-color: var(--bg-btn-calculator);
+    border: none;
+    margin: 5px auto;
+}

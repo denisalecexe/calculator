@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon/" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- CONTAINER DELL'INTERA CALCOLATRICE -->
+    <div id="calculator">
+        <!-- INPUT DI TESTO PER SCRIVERE -->
+        <input type="text" name="result" id="result" value="0" readonly>
+
+        <!-- CONTAINER PER I TASTI DELLA CALCOLATRICE -->
+        <div id="btn-container">
+            <!-- CONTENUTORE PER I BOTTONI AVANZATI -->
+            <div id="btn-advanced">
+                <button class="btn back-space"><i class="bi bi-backspace"></i></button>
+                <button class="btn canc"><i class="bi bi-c-circle"></i></button>
+                <button class="btn open-parenthesis">(</button>
+                <button class="btn close-parenthesis">)</button>
+            </div>
+
+            <!-- CONTENITORE PER I NUMERI -->
+            <div id="btn-number">
+                <button class="btn btn-1">1</button>
+                <button class="btn btn-2">2</button>
+                <button class="btn btn-3">3</button>
+                <button class="btn btn-4">4</button>
+                <button class="btn btn-5">5</button>
+                <button class="btn btn-6">6</button>
+                <button class="btn btn-7">7</button>
+                <button class="btn btn-8">8</button>
+                <button class="btn btn-9">9</button>
+                <button class="btn btn-0">0</button>
+            </div>
+
+            <!-- CONTENITORI PER GLI OPERATORI -->
+            <div id="btn-operator">
+                <button class="btn plus">+</button>
+                <button class="btn minus">-</button>
+                <button class="btn division">/</button>
+                <button class="btn multiplication">*</button>
+                <button class="btn moduls">%</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
