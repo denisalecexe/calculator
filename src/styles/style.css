@@ -2,22 +2,23 @@
 :root {
     --bg-body: #000000;
     --bg-calculator: #142f44;
-    --bg-btn-calculator: #1d3849;
     --border-calculator: #c2c2c2;
-    --text: #a2bbcf;
     --btn-advanced: #dd2d00;
-    --btn-numbers: #c2d4b1;
-    --btn-operators:#a17944;
+    --btn-numbers: #1d3849;
+    --btn-operators: #f1a642;
+    --btn-text-advanced: #1d38499f;
+    --btn-text-numbers: #90ece58a;
+    --btn-text-operators: #1d38499f;
 }
 
 /* TAG */
 /* stile per il body */
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     overflow: hidden;
     background-color: var(--bg-body);
-    color: var(--text);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,26 +29,92 @@ body{
 /* ID */
 /* stile per il contenitore che contiene tutta la calcolatrice */
 #calculator {
-    display: grid;
-    place-items: center;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px; /* evita che si allarghi troppo su PC */
     background-color: var(--bg-calculator);
     border: 3px solid var(--border-calculator);
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 15px;
+    gap: 12px; /* spazio verticale tra schermo e i vari blocchi di tasti */
 }
 
 /* stile per l'input dove si vedono i numeri scritti */
 #result {
     border: none;
     outline: none;
-    margin: 5px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px; 
+    font-size: 1.5rem;
+}
+
+/* CONTENITORE GENERALE DEI BOTTONI */
+#btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* spazio uniforme tra le macro-aree */
+    width: 100%;
+}
+
+/* TASTI AVANZATI */
+#btn-advanced {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* distanziamento tra i tasti avanzati */
+}
+
+/* TASTI NUMERICI */
+#btn-number {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali al 100% dello spazio */
+    gap: 10px; /* distanziamento perfetto tra i numeri */
+    width: 100%;
+}
+
+#btn-number .btn-0 {
+    grid-column: 2 / 3; /* mantiene lo 0 al centro nell'ultima riga */
+}
+
+/* TASTI OPERATORI */
+#btn-operator {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px; /* distanziamento perfetto tra gli operatori */
+}
+
+/* --- APPLICAZIONE DEI COLORI DELLA ROOT --- */
+#btn-advanced .btn {
+    background: var(--btn-advanced);
+    color: var(--btn-text-advanced);
+}
+
+/* questo forza le icone di bootstrap a prendere il colore del testo */
+#btn-advanced .btn i {
+    color: inherit !important;
+}
+
+#btn-number .btn {
+    background: var(--btn-numbers);
+    color: var(--btn-text-numbers);
+}
+
+#btn-operator .btn {
+    background: var(--btn-operators);
+    color: var(--btn-text-operators);
 }
 
 /* CLASS */
-/* stile per tutti i bottoni presenti */
+/* stile globale per i bottoni presenti */
 .btn {
-    background-color: var(--bg-btn-calculator);
+    flex: 1; /* forza tutti i bottoni nei contenitori flex a distribuirsi equamente */
+    width: 100%;     /* forza tutti i bottoni nei contenitori grid a riempire la cella */
     border: none;
-    margin: 5px auto;
+    padding: 15px 0; /* altezza verticale uniforme e cicciotta per tutti */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
 }
