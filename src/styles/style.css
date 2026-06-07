@@ -48,6 +48,7 @@ body {
     border-radius: 5px;
     padding: 8px; 
     font-size: 1.5rem;
+    cursor: default;
 }
 
 /* CONTENITORE GENERALE DEI BOTTONI */
