@@ -107,6 +107,17 @@ body {
     color: var(--btn-text-operators);
 }
 
+/* stili per i bottoni di vigola (comma) e uguale (equals) */
+#comma {
+    background: var(--btn-advanced) !important;
+    color: var(--btn-text-advanced) !important;
+}
+
+#equals {
+    background: var(--btn-operators) !important;
+    color: var(--btn-text-operators) !important;
+}
+
 /* CLASS */
 /* stile globale per i bottoni presenti */
 .btn {
