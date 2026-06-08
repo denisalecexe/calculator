@@ -16,6 +16,8 @@ btnKeys.forEach(singleButton => {
             resultInput.value = ""; // questo cancella tutto il testo all'interno dell'input
         } else if (singleButton.id === "back-space") {
             resultInput.value = resultInput.value.slice(0, -1); // questo cancella uno alla volta i caratteri presenti nell'input
+        } else if (singleButton.id === "equals") {
+            resultInput.value = eval(resultInput.value); // questo fa in modo di leggere la strina nell'input e fare l'operazion presente per dare il risultato
         } else {
             resultInput.value += textKey; // questo fa in modo di scrivere effettivamente nell'input grazie ai tasti presenti
         }
