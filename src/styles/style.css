@@ -54,16 +54,18 @@ body {
 /* CONTENITORE GENERALE DEI BOTTONI */
 #btn-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px; /* spazio uniforme tra le macro-aree */
     width: 100%;
 }
 
 /* TASTI AVANZATI */
 #btn-advanced {
-    display: flex;
-    width: 100%;
-    gap: 10px; /* distanziamento tra i tasti avanzati */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: auto;
+    min-width: 60px; /* impostata una larghezza minima per i tasti operatore */
+    gap: 10px; 
 }
 
 /* TASTI NUMERICI */
@@ -81,9 +83,12 @@ body {
 /* TASTI OPERATORI */
 #btn-operator {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 10px; /* distanziamento perfetto tra gli operatori */
+    flex-direction: column;
+    align-items: flex-end; /* allinea i bottoni interni a destra del loro box */
+    margin-left: auto;     /* spinge l'intero box degli operatori tutto a destra */
+    width: auto;
+    min-width: 60px; /* impostata una larghezza minima per i tasti operatore */
+    gap: 10px; 
 }
 
 /* --- APPLICAZIONE DEI COLORI DELLA ROOT --- */
@@ -124,6 +129,7 @@ body {
     flex: 1; /* forza tutti i bottoni nei contenitori flex a distribuirsi equamente */
     width: 100%;     /* forza tutti i bottoni nei contenitori grid a riempire la cella */
     border: none;
+    padding: 15px 20px;    /* aggiunto padding orizzontale (es. 20px) per dare larghezza ai tasti in colonna */
     padding: 15px 0; /* altezza verticale uniforme e cicciotta per tutti */
     font-size: 1.2rem;
     font-weight: bold;
