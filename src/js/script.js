@@ -10,6 +10,15 @@ btnKeys.forEach(singleButton => {
     singleButton.addEventListener('click', () => {
         const textKey = singleButton.innerText;
         console.log(textKey);
+
+        // loop if/else if/else per far si che i tasti cliccati vengano distinti uno dall'altro
+        if (singleButton.id === "canc") {
+            resultInput.value = ""; // questo cancella tutto il testo all'interno dell'input
+        } else if (singleButton.id === "back-space") {
+            resultInput.value = resultInput.value.slice(0, -1); // questo cancella uno alla volta i caratteri presenti nell'input
+        } else {
+            resultInput.value += textKey; // questo fa in modo di scrivere effettivamente nell'input grazie ai tasti presenti
+        }
     })
 })
 
