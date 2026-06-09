@@ -31,6 +31,24 @@ La calcolatrice presenta un design scuro (Dark Mode) con una disposizione asimme
 
 ---
 
+## Struttura del progetto
+
+``` text
+calculator/
+├── src/
+│   ├── assets/
+│   │   └── favicon/
+│   │       └── clac-favicon.ico
+│   ├── js/
+│   │   └── script.js
+│   ├── styles/
+│   │   └── style.css
+│   └── index.html
+└── README.md
+```
+
+---
+
 ## Autore
 Progetto interamente sviluppato da un *appassionato di coding e che sta imparando da autodidatta*.
 Ogni riga di codice presente in questo progetto, che va dalla semantica **HTML** alla logica di **JavaScript** fa parte del mio viaggio, compreso ogni errore commesso per imparare!
