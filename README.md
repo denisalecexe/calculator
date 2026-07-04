@@ -49,6 +49,17 @@ calculator/
 
 ---
 
+## Contribuire al progetto
+Le pull request sono benvenute.
+Per modifiche sostanziali, si prega di aprire prima una segnalazione per discutere di cosa si desidera modificare.
+
+---
+
 ## Autore
-Progetto interamente sviluppato da un *appassionato di coding e che sta imparando da autodidatta*.
-Ogni riga di codice presente in questo progetto, che va dalla semantica **HTML** alla logica di **JavaScript** fa parte del mio viaggio, compreso ogni errore commesso per imparare!
+* **Denis (Dharelyx)** - Sviluppatore Junior appassionato di codice e problem solving.
+* Progetto completato come parte del mio percorso.
+
+---
+
+## Licenza
+Questo progetto è rilasciato sotto licenza [MIT](https://choosealicense.com/licenses/mit/)
