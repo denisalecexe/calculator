@@ -44,6 +44,7 @@ calculator/
 │   ├── styles/
 │   │   └── style.css
 │   └── index.html
+├── LICENSE
 └── README.md
 ```
 
